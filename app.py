@@ -70,7 +70,7 @@ if prompt := st.chat_input("Escribe tu duda o pega un enunciado..."):
     with st.chat_message("assistant"):
         with st.spinner("Resolviendo..."):
             res = client.models.generate_content(
-                model="gemini-2.5-flash",
+                model="gemini-1.5-flash",
                 contents=contents,
                 config=types.GenerateContentConfig(system_instruction=SYSTEM_INSTRUCTION, temperature=0.2)
             )
